@@ -12,4 +12,3 @@ class Mail(object):
         self.yag.send(to=self.to, 
                       subject=subject, 
                       contents=contents)
-    
