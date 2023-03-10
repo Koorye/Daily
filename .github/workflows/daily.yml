@@ -19,8 +19,8 @@ jobs:
           python-version: 3.8
 
       - run: pip install -r requirements.txt
-      - run: python main.py \
-             --mail.host ${{ secrets.MAIL_HOST }} \
-             --mail.username ${{ secrets.MAIL_USERNAME }} \
-             --mail.password ${{ secrets.MAIL_PASSWORD }} \
+      - run: python main.py 
+             --mail.host ${{ secrets.MAIL_HOST }} 
+             --mail.username ${{ secrets.MAIL_USERNAME }} 
+             --mail.password ${{ secrets.MAIL_PASSWORD }} 
              --mail.to ${{ secrets.MAIL_TO }} 
