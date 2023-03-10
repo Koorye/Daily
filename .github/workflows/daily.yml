@@ -6,13 +6,16 @@ on:
 jobs: 
   build: 
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@main
-    
-    - name: Set up Python 3.8
-      uses: actions/setup-python@main
-      with:
-        python-version: 3.8
 
-    - run: python main.py
+    steps:
+      - name: Checkout
+          uses: actions/checkout@v2
+          with:
+            ref: master
+      
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - run: python main.py
