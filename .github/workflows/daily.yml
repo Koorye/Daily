@@ -1,0 +1,18 @@
+name: daily
+on: 
+  push:
+    branches:
+    - main
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+  steps:
+  - name: checkout
+    uses: actions/checkout@main
+    
+  - name: set up python 3.8
+    uses: actions/setup-python@main
+    with:
+      python-version: 3.8
+
+  - run: python main.py
